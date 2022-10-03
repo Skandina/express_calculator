@@ -29,7 +29,7 @@ pipeline {
       steps {
         script {
           docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
-            def im = docker.build("skandina/express-cacluator")
+            def im = docker.build("skandina/express-calculator")
             im.push()
           }
         }
